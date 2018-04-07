@@ -1,0 +1,59 @@
+#cloud-config
+apt_update: true
+apt_upgrade: true
+packages:
+  - neovim
+  - mosh
+  - zsh
+  - tmux
+  - git
+  - mercurial
+  - python-pip
+  - python3-pip
+  - ruby
+  - ruby-dev
+  - netstat-nat
+  - iptables
+  - net-tools
+  - golang
+  - dirmngr
+  - build-essential
+  - software-properties-common
+  - apt-transport-https
+users:
+  - name: cs
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmJBJFKJhmJrw7GjVtTTgzp8+/rsm3HPiaX3/iYjfuqmUpKA1kKO8m+T56tCppe0VQlN2qHoZhhdrCLEXOfTGYKtm1737IZ5O+RaRR0RI6OxnE4e3jFgJxmNbV58tqMWip5F24TL1ciS0bCm0hCU0N8h2iKs6Xz4d9eHmB/KcXdgGegvd0sPJVAFpPYkLobWD84NCcczNgY2h5Uy1NpMHURbykda5BCIo95Oo9pj2e/WNjcmKNQBdK8Kmb08WUIOSYXmCUQSXVZc9zC3gBfgkQWFdsaKwmQjRj5hqyl3R2X08iNZ+KamAapN/v2TmgFeQN33seYk8rNP3d3ZCgAhMp yubikey
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbddddT1GyB3ndBPY527DacbvMeKWOvl1HZlZBVvx6SAGVxN8DBkjsAyEX4PcOgdw0oeMytmD4lCO/bhU6QTsvOEktERc5m3TdQMuPB9nodE9kFNq5V+XUMQF+L1DwFqWDVzTrslZC32KqJdqKYfxo/bMv3SFonPhyoEA3ark+9vz0SuUyJuyuFimJ9T1H6rLJvkzcHDFSSyN6htEyGUr47rvv4cZAeMqZBub0Ioqy73D1LE2u9c33MCCa6p3JgFQ9wnxxBAxvtuSk25sOwp2o9ghORIjyT/JUtLKKEhpc761vgQRsDIBepsSyLPsVShbGjx2Jnd+HdurA9l9OuFZL tablet
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxbF2FiUHzbjwg+3aqcJdFdMr3xjkH9grpdd4J95QDXv7UAQW/BoAF+7Y3MlXWfKxKuKnZndn5fg5P3iaRRQ1sy2v2h/WErRnbb/SjgNAjuAadlKRPo7EdsoN7Xq8BhZJsFH6RhlG0bXZ0rC3xGIgXpxJKwG/uxPf0itbJD6gPURZzRF6aWPBM3rD31oYuXXxGxva3utNJhPMRP/gzC+x9P2rTIgPdrYtO+l4wd9OSjo5bOYclMJ5bOoDHEcIpKynOGeXsaNeqHbpDC8UnEsD/+TqiP7wu20VAWycgQiERQCgJFAZgG9On+gySGGKFWHzbNxvf21Uq3dJ6P2h2wwk3 transmit
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZQsoS1ETe7Tc92hBv6aty5Tsg1wazPynujkuJ6fJTADemYxCBEbZG8Hv3q96PXLHjhgYZrthbz20q7jJLRhvpyz+96xUj7C/+qJqOsW3u7FIKCim4HF5Q9cC5DjgbXH1EcaKQmms0JVAewKZOclgE3V8Q3T7MVME/O4Zkry7IWVyzXC+kapOSpfe4qUzKrtb4d0q4ZLyxvbTRpc/qjN/J1nRh/HHst20eos2aZGT2bCSZAAY4denUl0T0fb3kl7z8RMme1JIeBolv7U+Zkhe/KcD1WN4wlvVimYjnGWFP8loWh0ttTo7PH442Va13tDTF5QfzBz33yM86K4ZInVWD working-copy 
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDASkXcQ1tpIOwLXn0rXV1e61m/9FFo0PETSBz8Jczx/XHX5dSSncWUs0wQhsbFcshfBgKF+ebT79Pc2eLeGG0qsNoRlZN3B8dWy1VDkeWif6d4VLOQERMiQfihH8Mv6tWLR0Aws5l0Kc+fiGwD+di9ukN3SLUjqLWDXFXZfywo9kJ3YHgIBPKcUqwIXXfPbVlBVZ4kvr0uzNFl2Aq+THbaaYEB6clPjptb4TD9wI69R5/WtzbjXmpO6WUlcZR7ntXHCoYfRTMmotb6ODCvwolXbquHAYyWqFwA281Uz2pgRsMrqvrG05lyj8Y8ZPAbQP2VciyQ/02jii620ehgF2lpu4QXemVyZXUB8XkpK8KiPyZWSr1OePU5NhdE2w8EyoiQfZDezCTmbpktIXq+o/G6HRih9juxrKHFD8ZdYUGTy3pAzqvyevp6+ml1tCdcrGssN+D2BjxrmTHehEGgbPPiuamnAJU10Eaw5JxCEAHcLWpkp9IY1RJTK/ehakeAdwm7BwLz+vwnnvLuVVcdrCcXinrUISyjoHIMhYigBgFQd+t5VJs9hhDdeMnxrv2n2X8VKoOe07vDFBmnagl+34K075+Dy5r4F0C7wVkhdDIHsN2oMKPNI3LTq8KsG2mLNeu0ssGuedmOo/NexdVHdS6I5/UwCsL3VUjkt3sFIEqZDQ== krypton
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/zsh
+runcmd:
+  # OpenSSH setup
+  - sed -i -e '/^[#]Port/s/^.*$/Port 9922/' /etc/ssh/sshd_config
+  - sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin no/' /etc/ssh/sshd_config
+  - sed -i -e '$aAllowUsers cs' /etc/ssh/sshd_config
+  - service ssh restart
+  # Krypton setup
+  - apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C4A05888A1C4FA02E1566F859F2A29A569653940 
+  - add-apt-repository "deb http://kryptco.github.io/deb kryptco main"
+  - apt-get update
+  - apt-get install -y kr
+  # Setup ZSH 
+  - git clone --recursive https://github.com/sorin-ionescu/prezto.git /home/cs/.zprezto
+  - git clone https://github.com/csstaub/zsh-config.git /home/cs/zsh-config
+  - mv /home/cs/zsh-config/.* /home/cs/zsh-config/* /home/cs
+  - rm -rf /home/cs/zsh-config
+  # Setup NeoVim
+  - mkdir -p /home/cs/.config
+  - git clone --recursive https://github.com/csstaub/nvim-config.git /home/cs/.config/nvim
+  - chown -R cs:cs /home/cs
+  # Install neovim packages
+  - pip install neovim || pip install -U neovim
+  - pip3 install neovim || pip3 install -U neovim
+  - gem install neovim || gem upgrade neovim
+  # DigitalOcean agent
+  - curl -sSL https://agent.digitalocean.com/install.sh | sh
